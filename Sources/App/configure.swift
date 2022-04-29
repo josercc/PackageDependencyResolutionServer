@@ -17,6 +17,8 @@ public func configure(_ app: Application) throws {
 
     /// 添加创建 Package 模型
     app.migrations.add(CreatePackageMigration())
+    /// 添加创建 Log 模型
+    app.migrations.add(CreateLogMigration())
     try app.autoMigrate().wait()
 
     // register routes
